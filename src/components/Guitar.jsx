@@ -1,4 +1,4 @@
-export default function Guitar ({guitar, setCart}){
+export default function Guitar ({guitar, addToCart}){
   const { id, name, image, description, price } = guitar
   // Setear el estado setCart para ageragar la guitarra al carrito de compras
   // Este es una de las formas de hacerlo y que persistan los datos, osea si ya se grego que mantengan 
@@ -37,8 +37,8 @@ export default function Guitar ({guitar, setCart}){
           // Se pasa otro callback y se le pasa el state anterior y se hace una copia con spred operator
           // Por convencion se le pone el prevSate , prevCart haciendo al estado anterior en este caso del carrito etc...
          
-          onClick={() => setCart((prevCart) => [...prevCart, guitar])}
-          
+          // onClick={() => setCart((prevCart) => [...prevCart, guitar])}
+            onClick={() => addToCart(guitar)}
            >
             Agregar al Carrito
           </button>
